@@ -26,6 +26,10 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+section p {
+    color: #666; /* Cambiado a gris medio */
+}
+
 a {
     display: block;
     margin: 10px 0;
@@ -65,4 +69,5 @@ footer {
         font-size: 16px;
     }
 }
+
 
