@@ -1,0 +1,82 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Viajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #saldo {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formulario de Registro de Viajes</h2>
+
+    <form id="dataForm" action="https://script.google.com/macros/s/AKfycbwbUDTNM856E2zyVDK7rqxr-IvofVe3_BMXepwR1K5akt6MpPeS0Dj7_vlNwJKyCpQzHQ/exec" method="post">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+
+		<label for="vehiculo">Vehiculo:</label>
+		<select id="vehiculo" name="vehiculo">
+			<option value="STEP VAN">Step Van</option>
+			<option value="Particular">Particular</option>
+		</select>
+
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required>
+
+        <label for="costo">Costo:</label>
+        <input type="text" id="costo" name="costo" required>
+
+        <button type="submit" >Enviar Datos</button>
+    </form>
+
+</body>
+</html>
