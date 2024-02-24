@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Viajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #saldo {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formulario de Registro de Viajes</h2>
+
+    <form id="dataForm" action="https://script.google.com/macros/s/AKfycbyvKgEerHNRE4dEgN_uKLUJ57XLuzsmRlXz1yo5qxW0ZOL7Q_JcZfs4uGZeGGbGsq-z/exec" method="post">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" name="cliente" required>
+
+        <label for="origen">Origen:</label>
+        <input type="text" id="origen" name="origen" required>
+
+        <label for="destino">Destino:</label>
+        <input type="text" id="destino" name="destino" required>
+
+        <label for="cobro">Cobro:</label>
+        <input type="number" id="cobro" name="cobro" required>
+
+        <label for="gasolina">Gasolina:</label>
+        <input type="number" id="gasolina" name="gasolina" required>
+
+        <label for="pagoChofer">Pago Chofer:</label>
+        <input type="number" id="pagoChofer" name="pagoChofer" required>
+
+        <label for="manifiesto">Manifiesto:</label>
+        <input type="text" id="manifiesto" name="manifiesto" required>
+
+        <button type="submit" onclick="mostrarSaldo()">Enviar Datos</button>
+    </form>
+
+    <p id="saldo">Saldo: </p>
+
+    <script>
+        // Función para realizar cálculos y mostrar el saldo
+        function mostrarSaldo() {
+            // Obtener los valores del formulario
+            var cobro = parseFloat(document.getElementById('cobro').value);
+            var pagoChofer = parseFloat(document.getElementById('pagoChofer').value);
+            var gasolina = parseFloat(document.getElementById('gasolina').value);
+            var manifiesto = parseFloat(document.getElementById('manifiesto').value);
+
+            // Calcular el saldo
+            var saldo = cobro - pagoChofer - gasolina - manifiesto;
+
+            // Mostrar el saldo en la página
+            document.getElementById('saldo').innerText = 'Saldo: ' + saldo.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
