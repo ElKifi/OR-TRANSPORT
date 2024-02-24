@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -90,18 +89,18 @@
     <p id="saldo">Saldo: </p>
 
     <script>
-        // Función para realizar cálculos y mostrar el saldo
+        
         function mostrarSaldo() {
-            // Obtener los valores del formulario
+            
             var cobro = parseFloat(document.getElementById('cobro').value);
             var pagoChofer = parseFloat(document.getElementById('pagoChofer').value);
             var gasolina = parseFloat(document.getElementById('gasolina').value);
             var manifiesto = parseFloat(document.getElementById('manifiesto').value);
 
-            // Calcular el saldo
+           
             var saldo = cobro - pagoChofer - gasolina - manifiesto;
 
-            // Mostrar el saldo en la página
+           
             document.getElementById('saldo').innerText = 'Saldo: ' + saldo.toFixed(2);
         }
     </script>
