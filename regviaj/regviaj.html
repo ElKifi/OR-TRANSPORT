@@ -5,26 +5,38 @@
     <title>Formulario de Registro de Viajes</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
         }
 
         h2 {
             text-align: center;
+            color: #fff;
         }
 
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: #fff;
+            color: #666;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px; 
+            margin: 0 auto; 
         }
 
         label {
             margin-top: 10px;
+            color: #333;
         }
 
         input, select {
-            width: 100%;
+            width: calc(100% - 16px);
             padding: 8px;
             margin-top: 5px;
             margin-bottom: 10px;
@@ -51,6 +63,7 @@
             text-align: center;
             margin-top: 20px;
             font-weight: bold;
+            color: #fff;
         }
     </style>
 </head>
@@ -89,18 +102,14 @@
     <p id="saldo">Saldo: </p>
 
     <script>
-        
         function mostrarSaldo() {
-            
             var cobro = parseFloat(document.getElementById('cobro').value);
             var pagoChofer = parseFloat(document.getElementById('pagoChofer').value);
             var gasolina = parseFloat(document.getElementById('gasolina').value);
             var manifiesto = parseFloat(document.getElementById('manifiesto').value);
 
-           
             var saldo = cobro - pagoChofer - gasolina - manifiesto;
 
-           
             document.getElementById('saldo').innerText = 'Saldo: ' + saldo.toFixed(2);
         }
     </script>
