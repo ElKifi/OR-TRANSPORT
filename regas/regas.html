@@ -5,22 +5,35 @@
     <title>Formulario de Registro de Viajes</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            padding: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
         }
 
         h2 {
             text-align: center;
+            color: #fff;
         }
 
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: #fff;
+            color: #666;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 70%;
+            max-width: 400px; 
+            margin: 20px auto; 
         }
 
         label {
             margin-top: 10px;
+            color: #333;
         }
 
         input, select {
@@ -51,6 +64,7 @@
             text-align: center;
             margin-top: 20px;
             font-weight: bold;
+            color: #fff;
         }
     </style>
 </head>
@@ -62,12 +76,11 @@
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha" name="fecha" required>
 
-
-		<label for="vehiculo">Vehiculo:</label>
-		<select id="vehiculo" name="vehiculo">
-			<option value="STEP VAN">Step Van</option>
-			<option value="Particular">Particular</option>
-		</select>
+        <label for="vehiculo">Vehiculo:</label>
+        <select id="vehiculo" name="vehiculo">
+            <option value="STEP VAN">Step Van</option>
+            <option value="Particular">Particular</option>
+        </select>
 
         <label for="estado">Estado:</label>
         <input type="text" id="estado" name="estado" required>
@@ -80,3 +93,4 @@
 
 </body>
 </html>
+
