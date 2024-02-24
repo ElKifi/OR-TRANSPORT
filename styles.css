@@ -9,6 +9,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 0 20px; /* Añade un espacio de relleno a los lados para pantallas más pequeñas */
 }
 
 header {
@@ -27,17 +28,40 @@ section {
 a {
     display: block;
     margin: 10px 0;
-    padding: 15px 20px; /* Aumenta el espacio interno para que se vea más como un botón */
+    padding: 15px 20px;
     text-decoration: none;
     color: #001f3f; /* Azul marino */
     background-color: #fff;
-    border: 2px solid #001f3f; /* Añade un borde como si fueran botones */
+    border: 2px solid #001f3f;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-    font-size: 18px; /* Aumenta el tamaño de la letra */
+    font-size: 18px;
 }
 
 a:hover {
-    background-color: #001f3f; /* Cambia el color de fondo al azul marino al pasar el ratón */
-    color: #fff; /* Cambia el color del texto a blanco al pasar el ratón */
+    background-color: #001f3f;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query para Pantallas Pequeñas */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px; /* Ajusta el tamaño de la letra para pantallas más pequeñas */
+    }
+
+    section {
+        padding: 15px; /* Ajusta el espacio interno de la sección */
+    }
+
+    a {
+        font-size: 16px; /* Ajusta el tamaño de la letra de los enlaces para pantallas más pequeñas */
+    }
 }
