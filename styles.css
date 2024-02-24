@@ -27,22 +27,17 @@ section {
 a {
     display: block;
     margin: 10px 0;
-    padding: 10px;
+    padding: 15px 20px; /* Aumenta el espacio interno para que se vea más como un botón */
     text-decoration: none;
     color: #001f3f; /* Azul marino */
     background-color: #fff;
+    border: 2px solid #001f3f; /* Añade un borde como si fueran botones */
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    font-size: 18px; /* Aumenta el tamaño de la letra */
 }
 
 a:hover {
-    background-color: #ddd;
-}
-
-footer {
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #001f3f; /* Cambia el color de fondo al azul marino al pasar el ratón */
+    color: #fff; /* Cambia el color del texto a blanco al pasar el ratón */
 }
