@@ -2,7 +2,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #001f3f;
+    background-color: #333; /* Cambiado a gris oscuro */
     color: #fff; 
 }
 
@@ -15,6 +15,7 @@ body {
 header {
     text-align: center;
     padding: 1em;
+    color: #fff; /* Color del texto del encabezado */
 }
 
 section {
@@ -30,16 +31,16 @@ a {
     margin: 10px 0;
     padding: 15px 20px;
     text-decoration: none;
-    color: #001f3f; 
-    background-color: #fff;
-    border: 2px solid #001f3f;
+    color: #333; /* Color del texto de los enlaces */
+    background-color: #ddd; /* Color de fondo de los enlaces (gris claro) */
+    border: 2px solid #333; /* Color del borde de los enlaces (gris oscuro) */
     border-radius: 4px;
     transition: background-color 0.3s ease;
     font-size: 18px;
 }
 
 a:hover {
-    background-color: #001f3f;
+    background-color: #333; /* Cambiado al mismo gris oscuro del fondo */
     color: #fff;
 }
 
@@ -50,7 +51,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
 
 @media screen and (max-width: 600px) {
     body {
@@ -65,3 +65,4 @@ footer {
         font-size: 16px;
     }
 }
+
