@@ -2,14 +2,14 @@ body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #001f3f; /* Azul marino */
-    color: #fff; /* Letras blancas */
+    background-color: #001f3f;
+    color: #fff; 
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px; /* Añade un espacio de relleno a los lados para pantallas más pequeñas */
+    padding: 0 20px; 
 }
 
 header {
@@ -30,7 +30,7 @@ a {
     margin: 10px 0;
     padding: 15px 20px;
     text-decoration: none;
-    color: #001f3f; /* Azul marino */
+    color: #001f3f; 
     background-color: #fff;
     border: 2px solid #001f3f;
     border-radius: 4px;
@@ -51,17 +51,17 @@ footer {
     width: 100%;
 }
 
-/* Media Query para Pantallas Pequeñas */
+
 @media screen and (max-width: 600px) {
     body {
-        font-size: 16px; /* Ajusta el tamaño de la letra para pantallas más pequeñas */
+        font-size: 16px; 
     }
 
     section {
-        padding: 15px; /* Ajusta el espacio interno de la sección */
+        padding: 15px;
     }
 
     a {
-        font-size: 16px; /* Ajusta el tamaño de la letra de los enlaces para pantallas más pequeñas */
+        font-size: 16px;
     }
 }
