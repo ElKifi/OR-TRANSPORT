@@ -1,0 +1,33 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página HTML</title>
+</head>
+<body>
+
+  <!-- Aquí puedes tener tu propio contenido HTML -->
+  <div>
+    <h1>Contenido de mi página HTML</h1>
+    <p>El valor de la celda es: <span id="valorCelda"></span></p>
+  </div>
+
+  <script>
+    // Hace una solicitud HTTP a la aplicación web de Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbzQjYcngqPbDdosP1Fw01EqXx1Z8dTmJYG_qqd_WykHlz7L7aa3_-gYvLP7LCrU1-Tg/exec?celda=E2', { 
+      method: 'GET',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.text())
+      .then(data => {
+        // Actualiza el contenido del span con el valor de la celda
+        document.getElementById('valorCelda').textContent = data;
+      })
+      .catch(error => console.error('Error al obtener el valor de la celda:', error));
+  </script>
+
+</body>
+</html>
