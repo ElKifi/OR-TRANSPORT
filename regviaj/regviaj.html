@@ -108,7 +108,7 @@
             var gasolina = parseFloat(document.getElementById('gasolina').value);
             var manifiesto = parseFloat(document.getElementById('manifiesto').value);
 
-            var saldo = cobro - pagoChofer - gasolina + manifiesto;
+            var saldo = cobro - pagoChofer - gasolina - manifiesto;
 
             document.getElementById('saldo').innerText = 'Saldo: ' + saldo.toFixed(2);
         }
